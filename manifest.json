@@ -1,0 +1,14 @@
+{
+  "name": "GLPI Ticket Form",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Disables the Save button on GLPI ticket form if the text area contains less than 30 characters.",
+  "host_permissions": ["https://glpi.thermcross.fr/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://glpi.thermcross.fr/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
